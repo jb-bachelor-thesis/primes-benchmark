@@ -52,7 +52,11 @@ public class MatrixHandler {
         var matrix1 = generateMatrix(size);
         var matrix2 = generateMatrix(size);
 
-        var multResult = multiplyMatrix(matrix1, matrix2);
+        var multResult = matrix1;
+
+        for (int i = 0; i < 100; i++) {
+            multResult = multiplyMatrix(multResult, matrix2);
+        }
 
         return reduceMatrix(multResult);
     }
