@@ -7,6 +7,7 @@ import java.util.Random;
 @Component
 public class MatrixHandler {
 
+    public static final int MULTIPLICATION_LIMIT = 40;
     private final Random random = new Random();
 
     private double[][] generateMatrix(int size) {
@@ -54,7 +55,7 @@ public class MatrixHandler {
 
         var multResult = matrix1;
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < MULTIPLICATION_LIMIT; i++) {
             multResult = multiplyMatrix(multResult, matrix2);
         }
 
